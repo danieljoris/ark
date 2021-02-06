@@ -1,8 +1,8 @@
-using Ark.Shared;
+using Ark.Core.Entities;
 
 namespace Ark.Domain.Entities
 {
-    public class Race : Entity
+    public sealed class Race : Entity
     {
         public string Description { get; private set; }
         public Specie Specie { get; private set; }

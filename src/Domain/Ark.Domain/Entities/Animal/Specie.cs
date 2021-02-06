@@ -1,12 +1,12 @@
 namespace Ark.Domain.Entities
 {
-    public class Specie
+    public sealed class Specie
     {
+        public string Description { get; private set; }
+
         public Specie(string description)
         {
             Description = description;
         }
-
-        public string Description { get; private set; }
     }
 }
