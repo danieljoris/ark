@@ -1,0 +1,29 @@
+version: "3"
+
+# This docker-compose is just for development environment
+services:
+  # app:
+  #   image: ark
+  #   env_file:
+  #     - .env
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8085:80"
+  # depends_on:
+  #   - database
+  # networks:
+  #   - ark_network
+  database:
+    container_name: mongodb
+    image: "mongo:latest"
+    ports:
+      - "27020:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=ark
+    volumes:
+      - "./data/db:/data/db"
+    restart: always
