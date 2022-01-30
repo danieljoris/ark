@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ark"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Joris <d.joris@rioanalytics.com.br>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.72.0"
+beanie = "^1.8.12"
+pydantic = "^1.9.0"
+dependency-injector = "^4.37.0"
+uvicorn = "^0.17.0"
+fastapi-pagination = "^0.9.1"
+fastapi-contrib = "^0.2.11"
+pytz = "^2021.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+poethepoet = "^0.12.2"
+uvicorn = "^0.17.0"
+black = {version = "^22.1.0", allow-prereleases = true}
+
+[tool.poe.tasks]
+ccache = { shell = 'rmdir "C:\Users\Daniel Joris\AppData\Local\pypoetry\Cache\batata" '}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
